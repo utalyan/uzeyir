@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Built-By: utaly
+Class-Path: dependency-jars/h2-1.4.199.jar
+Build-Jdk: 1.8.0_211
+Created-By: Maven Integration for Eclipse
+Main-Class: todo.TodoApplication
+
