@@ -7,10 +7,12 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@XmlRootElement(name = "user")
 public class UserDto {
 
     private Long id;

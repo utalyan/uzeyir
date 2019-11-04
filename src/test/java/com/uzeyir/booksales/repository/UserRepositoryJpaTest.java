@@ -20,7 +20,7 @@ import java.util.Set;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Transactional
-public class UserRepositoryTest {
+public class UserRepositoryJpaTest {
 
     @Autowired
     UserRepositoryJpa userRepositoryJpa;
@@ -124,17 +124,4 @@ public class UserRepositoryTest {
 
     }
 
-    @Test
-    public void category(){
-        Category category = new Category();
-        category.setName("Bilim-Kurgu");
-
-        Category returnCategory = new Category();
-
-        returnCategory = categoryRepositoryJpa.save(category);
-
-        org.hamcrest.MatcherAssert.assertThat(returnCategory.getId(),org.hamcrest.Matchers.greaterThan(Long.valueOf(0)));
-        org.hamcrest.MatcherAssert.assertThat(returnCategory.getName(),org.hamcrest.Matchers.equalTo("Bilim-Kurgu"));
-
-    }
 }

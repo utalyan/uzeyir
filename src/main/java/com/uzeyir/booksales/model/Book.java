@@ -3,6 +3,8 @@ package com.uzeyir.booksales.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -16,6 +18,7 @@ public class Book {
     @Column(name = "id")
     private Long id;
 
+    @NotBlank(message = "İsim Girilmeli.")
     String name;
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "author_book",
