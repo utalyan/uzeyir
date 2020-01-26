@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 import java.math.BigInteger;
 
 @Repository
-public interface AuthorRepositoryJpa extends JpaRepository<Author, BigInteger> {
+public interface AuthorRepositoryJpa extends JpaRepository<Author, Long> {
 }
